@@ -1,4 +1,4 @@
-//paso 1
+//Clase 37. Paso 1
 //capturar el <main>, <h2>, <a> y <p>
 const main = document.querySelector("main");
 const h2 = document.querySelectorAll("h2");
@@ -50,3 +50,23 @@ for (let i = 0; i < p.length; i++) {
 let mainvisible = document.querySelector("main");
 mainvisible.style.display = "block";
 console.log(mainvisible);
+
+//clase 38. Paso 1
+/*cada vez que el usuario haga clic sobre el
+logo de Digital House se muestre el menú lateral con id="menu".*/
+
+window.addEventListener("load", function () {
+  let logo = document.querySelector(".logoDH");
+  logo.addEventListener("click", function (e) {
+    let menu = document.querySelector("#menu");
+    menu.classList.toggle("mostrar");
+    alert("hola");
+  });
+});
+
+/*agregar un evento que permita ocultar el menú lateral cuando el
+mouse deje el área del menú.*/
+let menuLateral = document.querySelector("#menu");
+menuLateral.addEventListener("mouseout", function () {
+  menuLateral.style.display = "none";
+});
